@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Aprender JavaScript",
+        "done": false
+    },
+    {
+        "id": 2,
+        "title": "Terminar los ejercicios",
+        "done": false
+    },
+    {
+        "id": 3,
+        "title": "Hacer 100 sentadillas",
+        "done": false
+    },
+    {
+        "id": 4,
+        "title": "Ir al supermercado",
+        "done": true
+    },
+    {
+        "id": 5,
+        "title": "Comer algo saludable",
+        "done": true
+    },
+    {
+        "id": 6,
+        "title": "Hacer ejercicio",
+        "done": false
+    }
+]
