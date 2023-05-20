@@ -46,7 +46,7 @@ node index.js
 http://localhost:3000/
 ```
 
-6. Start using the app and follow the instructions on the screen.
+7. Start using the app and follow the instructions on the screen.
 
 
 # Features

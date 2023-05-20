@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const PUERTO = 80;
 
+// Async function that serves a static file.
 const serveStaticFile = async (file) => {
   return new Promise((resolve, reject) => {
     fs.readFile(file, function(err, data) {
@@ -12,11 +13,15 @@ const serveStaticFile = async (file) => {
   });
 } 
 
+
+// Function that sends the response.
 const sendResponse = (response, content, contentType) => {
   response.writeHead(200, {"Content-Type": contentType});
   response.end(content);
 }
 
+
+// Async function that handles the requests.
 const handleRequest = async (request, response) => {
     const url = request.url;
 

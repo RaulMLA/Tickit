@@ -151,8 +151,7 @@ const loadRest = () => {
 
 		let touchStartX, touchEndX, startTime, taskX = 0;
 		
-		const TIME_THRESHOLD = 300;
-		const SPACE_THRESHOLD = 200;
+		const TIME_THRESHOLD = 300, SPACE_THRESHOLD = 200;
 		
 		// Starts the swipe event.
 		task.addEventListener("touchstart", (event) => {
@@ -200,6 +199,7 @@ const loadRest = () => {
 // We load the tasks when the start button is pressed.
 const start_button = document.querySelector("#start-button");
 
+// We hide the initial screen and show the rest of the elements.
 start_button.addEventListener("click", () => {
 	
 	document.querySelector("#initial-screen").style.display = "none";
@@ -207,5 +207,6 @@ start_button.addEventListener("click", () => {
 	document.querySelector("#content").style.display = "block";
 	document.querySelector("#add-task-container").style.display = "flex";
 
+	// We load the tasks and the rest of the events.
 	loadTasks();
 });
