@@ -1,32 +1,32 @@
 [
     {
         "id": 1,
-        "title": "Aprender JavaScript",
+        "title": "Learn JavaScript",
         "done": false
     },
     {
         "id": 2,
-        "title": "Terminar los ejercicios",
+        "title": "Finish the exercises",
         "done": false
     },
     {
         "id": 3,
-        "title": "Hacer 100 sentadillas",
+        "title": "Do 100 squats",
         "done": false
     },
     {
         "id": 4,
-        "title": "Ir al supermercado",
+        "title": "Go to the supermarket",
         "done": true
     },
     {
         "id": 5,
-        "title": "Comer algo saludable",
+        "title": "Eat something healthy",
         "done": true
     },
     {
         "id": 6,
-        "title": "Hacer ejercicio",
+        "title": "Exsercise for 30 minutes",
         "done": false
     }
 ]

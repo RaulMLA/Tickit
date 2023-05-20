@@ -1,8 +1,8 @@
-/* Fuente Inter. */
+/* Inter Font. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
 
-/* Colores usados en la aplicación. */
+/* App colors. */
 :root {
 	--salmon: #ff5c5c;
 	--blue: #6074f9;

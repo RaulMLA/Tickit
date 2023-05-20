@@ -1,7 +1,7 @@
 let taskList = [];
 
 
-// Función que carga las tareas del fichero tasks.json.
+// Function that loads the tasks from the tasks.json file.
 const takeTasks = async () => {
 
 	try {
@@ -16,7 +16,7 @@ const takeTasks = async () => {
 }
 
 
-// Función que carga las tareas en el HTML.
+// Function that loads the tasks in the HTML.
 const loadTasks = async () => {
 
 	taskList = await takeTasks();
@@ -41,12 +41,12 @@ const loadTasks = async () => {
 		i++;
 	});
 
-	// Se cargan el resto de eventos.
+	// The rest of the events are loaded.
 	loadRest();
 }
 
 
-// Función que guarda las tareas en el fichero tasks.json usando POST.
+// Function that saves the tasks in the tasks.json file using POST.
 const saveTasks = async () => {
 
 	navigator.vibrate(30);
@@ -68,7 +68,7 @@ const saveTasks = async () => {
 }
 
 
-// Función que añade una tarea a la lista.
+// Function that adds a task to the list.
 const add = () => {
 
 	const taskName = document.querySelector("#task-name").value;
@@ -82,7 +82,7 @@ const add = () => {
 }
 
 
-// Función que elimina una tarea de la lista.
+// Function that removes a task from the list.
 const remove = (task) => {
 
 	taskList = taskList.filter(t => !task.id.includes('task' + t.id));
@@ -97,7 +97,7 @@ const remove = (task) => {
 }
 
 
-// Función que marca una tarea como hecha o por hacer.
+// Function that marks a task as done or not done.
 const toggleDone = (task) => {
 
 	taskList.forEach(t => {
@@ -110,16 +110,16 @@ const toggleDone = (task) => {
 }
 
 
-// Función que carga el resto de eventos.
+// Function that loads the rest of the events.
 const loadRest = () => {
 
 	let tasks = document.getElementById("container").querySelectorAll('[id^="task"]');
 
-	// Botón de añadir tarea.
+	// Button to add a task.
 	const addButton = document.querySelector("#fab-add");
 
 
-	// Se añade la tarea al pulsar o hacer click en el botón + y al pulsar enter.
+	// The task is added when the + button is pressed or clicked and when enter is pressed.
 	addButton.addEventListener("touchend", add);
 	addButton.addEventListener("click", add);
 	document.querySelector("#task-name").addEventListener("keyup", (event) => {
@@ -130,12 +130,12 @@ const loadRest = () => {
 	});
 
 
-	// Se añaden los eventos a cada tarea.
+	// The events are added to each task.
 	tasks.forEach(task => {
 
 		let timer;
 
-		// Comienzo del evento de pulsación larga.
+		// Starts the long press event.
 		task.addEventListener("touchstart", () => {
 			navigator.vibrate(15);
 			timer = setTimeout(() => {
@@ -143,7 +143,7 @@ const loadRest = () => {
 			}, 2000);
 		});
 
-		// Fin del evento de pulsación larga.
+		// Ends the long press event.
 		task.addEventListener("touchend", () => {
 			clearTimeout(timer);
 		});
@@ -154,14 +154,14 @@ const loadRest = () => {
 		const TIME_THRESHOLD = 300;
 		const SPACE_THRESHOLD = 200;
 		
-		// Comienzo del evento de deslizar.
+		// Starts the swipe event.
 		task.addEventListener("touchstart", (event) => {
 			touchStartX = event.touches[0].clientX;
 			taskX = event.touches[0].clientX;
 			startTime = event.timeStamp;
 		}, {passive: false});
 
-		// Evento de deslizar.
+		// Ends the swipe event.
 		task.addEventListener("touchmove", (event) => {
 			touchEndX = event.touches[0].clientX;
 			if (touchEndX - taskX > 0) {
@@ -170,7 +170,7 @@ const loadRest = () => {
 			}
 		}, {passive: false});
 
-		// Fin del evento de deslizar.
+		// Ends the swipe event.
 		task.addEventListener("touchend", (event) => {
 			endTime = event.timeStamp;
 			touchEndX = event.changedTouches[0].clientX;
@@ -197,7 +197,7 @@ const loadRest = () => {
 }
 
 
-// Cargamos las tareas al pulsar empezar.
+// We load the tasks when the start button is pressed.
 const start_button = document.querySelector("#start-button");
 
 start_button.addEventListener("click", () => {

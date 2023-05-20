@@ -76,7 +76,7 @@ const handleRequest = async (request, response) => {
 }
 
 
-// Inicializamos el servidor.
+// Server is listening on port 80.
 const server = http.createServer(handleRequest);
 server.listen(PUERTO);
 console.log(`Servidor escuchando en el puerto ${PUERTO}`);
